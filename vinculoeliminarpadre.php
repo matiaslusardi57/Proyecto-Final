@@ -1,0 +1,133 @@
+<?php
+  include("includes/conectar.php");
+  include("includes/funciones_utiles.php");
+
+$admin = recuperar_admin($_SESSION['usuario']);
+
+session_start();
+
+  if(!isset($_SESSION['usuario'])){
+    
+    header("vinculoeliminarpadre.php");
+  }
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Eliminar vinculo Padre-Hijo</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css"> 
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+
+<header>
+  <?php
+    include("zheader.php");
+   ?>
+</header>
+<body>
+
+<div class="container">
+
+<div class="container">
+  <div class="col-lg-12" style="text-align:center;">
+    <h3>Listado de Vinculos</h3>
+  </div>
+</div>
+  <div class="row">
+       <div class="col-lg-8 col-lg-offset-2" style="background-color: #E3FFE8; padding-top: 10px;">
+               
+                 
+                             <table class="table table-striped table-bordered table-hover" id="dataTables-addControls">
+                                    <thead>
+                                        <tr style="text-align: center;">
+
+                                            <th style="text-align: center;">Padre</th>
+                                            <th style="text-align: center;">Hijo</th>
+                                            <th style="text-align: center;">Eliminar Este Vinculo</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                          <?php 
+                          $sql = "SELECT distinct p.`NombreApellido`, a.`NombreApellido`, ap.`Alumno_DNI_Alumno`, ap.`Padre_DNI_padre`
+                                  from `alumno/padre`ap
+                                  inner join `alumno`a
+                                  on ap.`Alumno_DNI_Alumno`= a.`DNI_Alumno`
+                                  inner join `padre`p
+                                  on ap.`Padre_DNI_padre`= p.`DNI_padre`
+                                  
+                                 ";
+
+                          $rs = mysqli_query($db, $sql);
+                          if ( $rs ) {
+                            while ($r = mysqli_fetch_array($rs) ) {
+                              ?>
+                                        <tr>
+                                          
+                                            <td><?php  echo $r["0"]; ?></td>
+                                            <td><?php  echo $r["1"]; ?></td>
+                                            <td style="text-align: center;">
+                                              <button type="button" class="btn btn-danger" onClick="borravinculo(<?php echo $r["2"].','.$r["3"] ?>)">Borrar</button>
+                                            </td>
+                                         
+                                        </tr>
+                              <?php 
+                                }
+                              }
+                              ?>
+                                    </tbody>
+                                </table>
+                          </div>
+  </div>
+ <div class="row" style="margin:20px 0;">
+    <div class="col-lg-offset-5 col-lg-2">
+      <a href="vinculoeliminar.php" role="button" class="btn btn-default btn-lg btn-block"> 
+        <p style="margin: 3px 0;">Volver</p>
+      </a>
+    </div>
+  </div>
+
+
+
+
+
+ 
+<div class="clearfooter"></div>
+
+</div>
+
+
+
+<?php
+  include("zfooter.php");
+?>
+
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- DataTables JavaScript -->
+    <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+     <script src="js/plugins/dataTables/jquery.dataTables1.js"></script>
+    <script src="js/plugins/dataTables/dataTables.bootstrap1.js"></script>
+
+
+
+    <script>
+    $(document).ready(function() {
+        $('#dataTables-addControls').dataTable();
+    });
+
+  function borravinculo(Alumno_DNI_Alumno,Padre_DNI_padre) {
+    location.href = "xxvinculo.php?Alumno_DNI_Alumno=" + Alumno_DNI_Alumno + "&Padre_DNI_padre=" + Padre_DNI_padre;
+  }
+  
+    </script>
+   
+</body>
+</html>

@@ -1,0 +1,112 @@
+<?php
+  include("includes/conectar.php");
+  require("includes/requiere_login.php");
+  include("includes/funciones_utiles.php");
+
+
+  $padre = recuperar_padre($_SESSION['usuario']);
+  $hijo = recuperar_hijo($padre['DNI_padre']);
+
+
+ ?><!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Inicio Padre</title>
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/bootstrap.min.css"> 
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<header>
+  <?php
+    include("zheader.php");
+   ?>
+</header>
+<body>
+
+<div class="container">
+<?php if (isset($_GET["p"])) {
+  if($_GET["p"]==1) {   ?>
+  <p style="color: green; margin-top: 20px; font-size: 20px; text-align: center;">
+    <b><?php  echo   "Su contraseña ha sido cambiada con exito";?></b>
+  <p>
+  <?php }} ?>
+<h1 style="text-align:center;">Bienvenido <?php echo $padre['NombreApellido'] ?></h1>
+  <?php
+$ps=$padre['DNI_padre'];
+$consulta="SELECT a.`NombreApellido`, a.`DNI_Alumno`
+FROM `padre`p
+inner join`alumno/padre`ap
+on ap.`Padre_DNI_padre`=p.`DNI_padre`
+inner join `alumno`a
+on a.`DNI_Alumno`=ap.`Alumno_DNI_Alumno`
+WHERE `DNI_padre`=$ps";
+
+$resultado=mysqli_query($db, $consulta);
+ $hij=$hijo['DNI_Alumno'];
+?>
+
+<div class="caja">
+<div class="row">
+<table align="center">
+<tr>
+
+  <?php  
+while (($fila=mysqli_fetch_row($resultado))==true) {
+  ?>
+
+
+<td>
+
+
+<a class="btn btn-link" onClick="buscahij(<?php echo $fila[1] ?>)">
+<img src="img/seg.png" height="200" style="width: 200px;" hspace="20px" alt="Carpetas hijos"><br> 
+<center>
+<button type="button" class="btn btn-link" onClick="buscahij(<?php echo $fila[1] ?>)"><h4> <?php echo $fila[0] ?></h4></button>
+</center>
+</a>
+</td>
+<?php 
+;
+}
+?>
+
+</tr>
+</table>
+</div>
+</div>
+
+
+    <script>
+
+
+  function buscahij(DNI_Alumno) {
+    location.href = "ingresar3.php?DNI_Alumno=" + DNI_Alumno;
+    }
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+ 
+<div class="clearfooter"></div>
+</div>
+
+
+<?php
+  include("zfooter.php");
+ ?>
+ 
+
+     <script src="js/jquery-1.12.2.js"></script>
+     <script src="js/bootstrap.min.js"></script>	
+</body>
+</html>

@@ -1,0 +1,319 @@
+
+header{	 
+ width: 100%;
+ overflow: hidden;
+ background:#252932;
+ height: 185px;
+	   
+ 
+}
+
+button {
+	text-decoration: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.caja4{
+	margin-top: 15px;
+margin-bottom: 15px;
+}
+
+
+.caja3{
+
+	margin-top: 100px;
+margin-bottom: 50px;
+}
+
+.caja1{
+margin-top: 50px;
+margin-bottom: 25px;
+margin-left: 150px;
+margin-right: 150px;
+
+}
+
+.caja{
+margin-top: 50px;
+margin-bottom: 40px;
+margin-left: 5em;
+margin-right: 5em;
+border-radius: 10px;
+}
+
+.caja2{
+margin-top: 100px;
+margin-bottom: 100px;
+margin-left: 70px;
+margin-right: 5em;
+border-radius: 10px;
+}
+
+#todo {
+	padding-top: 20px; 
+   min-height: 100%;
+   margin-bottom: -110px;
+   position: relative;
+   
+}
+
+#footer {
+	
+   margin-top: 110px;
+   position: relative;
+   background-color:#252932;
+   color: #F2FFF0
+}
+
+.clearfooter {
+   height: 85px;
+   clear: both;
+}
+
+body {
+	font-family: 'NexaRegular';    
+   background: #fffffa;
+}
+
+
+
+p{
+	font-family: sans-serif; 
+	font-size: 100%;
+}
+
+
+.p1{
+	font-family: 'Pacifico', cursive;
+	text-align:center;
+	color:#222d2d;	
+}
+
+h3 {
+    text-transform: uppercase;
+    color: #588cbf;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    font-size: 3em;
+    font-weight: normal;
+    font-family: 'open_sansbold';
+}
+
+h2{
+    text-transform: uppercase;
+    color: #588cbf;
+    border-bottom: 3px solid #588cbf;
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+    font-size: 3em;
+    font-weight: normal;
+    font-family: 'open_sansbold';
+}
+
+h4 {
+	font-size: 2em;
+}
+
+h5{
+	color: black;
+}
+
+
+.tabla {
+
+border-top-width: 10px;
+border-right-width: 1em;
+border-bottom-width: thick;
+border-left-width: thin;
+
+}
+
+
+span{
+	 color:red
+	 }
+
+.nottitulo{
+	    font-family: inherit;
+    font-size: 4.6rem;
+    font-weight: 600;
+    color: #01438d;
+
+}
+
+.notsub{
+	    font-family: "Source Sans Pro",sans-serif;
+	        font-size: 2rem;
+    line-height: 1.2em;
+    margin-bottom: 0;
+     margin-top: 30px;
+}
+
+.notcuerpo{
+	    font-family: "Source Sans Pro",sans-serif;
+	        font-size: 1.8rem;
+    line-height: 1.5em;
+     margin-bottom: 70px;
+}
+
+.cajanoti{
+margin-top: 50px;
+margin-bottom: 25px;
+margin-left: 150px;
+margin-right: 150px;
+
+}
+
+#vista {
+	float:left;
+	width:100%;
+	height:100%;
+	margin:0 1% 0 0;
+}
+
+.wrapper {
+	width: 80%;
+	overflow: hidden;
+	margin: auto;
+}
+
+header .logo {
+	float: left;
+}
+
+header nav {
+	float: right;
+	line-height: 175px;
+}
+
+header nav a {
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	padding: 10px 20px;
+	line-height: normal;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+header nav a:hover {
+	background-color: #f56f3a;
+	border-radius: 50px;
+	text-decoration: none;
+	color: white;
+}
+
+
+@media screen and (max-width: 950px) {
+	header .logo,
+	header nav {
+		width:100%;
+		text-align:center; /*Centramos el menu y el logotipo*/
+		line-height:100px;
+	}
+ 
+	.header2 {
+		height:auto;
+	}
+ 
+	.header2 .logo,
+	.header2 nav {
+		line-height:50px;
+	}
+}
+
+#footermio {
+
+    padding-top: 60px;
+    padding-bottom: 10px;
+    background: #f9f9f9;
+    font-size: 13px;
+    border-top: 1px solid #252932;
+}
+
+.social {
+	position: relative;
+    font-size: 12px;
+    line-height: 20px;
+    color: #66757f;
+    text-align: center;
+}
+
+html, body{
+	height: 100%;
+}
+
+#contact-page {
+    padding-top: 40px;
+}
+
+.ir-arriba {
+	display: none;
+	padding: 20px;
+	font-size: 15px;
+	color: #fff;
+	background: #024959;
+	cursor: pointer;
+	position: fixed;
+	bottom: 10px;
+	right: 10px;
+}
+
+#eventolista {
+    list-style: none none;
+    margin: 0;
+    padding: 0;
+}
+
+.fecha{
+    float: left;
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    margin-right: 5px;
+    text-align: center;
+    line-height: 15px;
+    color: #FFF;
+    background-color: #DB214C;
+}
+
+#events-old #eventolista .fecha {
+    margin: .7em 5px 0 0;
+    padding-left: 5px;
+}
+
+.fecha-d {
+    font-size: 28px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.fecha-m {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#eventolista li {
+    min-height: 50px;
+    
+    padding: 5px 0;
+    border-bottom: 1px solid #CCC;
+    cursor: pointer;
+    list-style: none none;
+}
+
+#smenu li {
+    margin: 0 10px;
+    padding: 4px 0;
+    list-style: none none;
+    border-bottom: 1px solid #F2F2F2;
+}
+
+#col-sidebar {
+    background: #5C96BC;
+}

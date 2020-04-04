@@ -1,0 +1,36 @@
+Host donde está subida la web
+
+www.escuelavillaamelia.esy.es
+
+Ingreso al Host http://www.hostinger.com.ar/
+
+email: pablocerretto48@gmail.com
+password: riverffbc08
+
+Base de datos
+
+db_name: u994002806_va
+user: u994002806_escu
+contraseña: pagina2016
+
+Email
+
+user: contacto@escuelavillaamelia.esy.es
+contraseña: contactoescuela
+
+Usuarios para login y prueba del sitio:
+
+Administrador Pablo
+
+usuario: 93720038
+contraseña: 421798
+
+Docente Jorge Montenegro
+
+usuario: 13889001
+contraseña: 4444
+
+Padre Matias Rossi
+
+usuario: 10011299
+contraseña: 12345
