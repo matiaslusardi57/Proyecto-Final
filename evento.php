@@ -1,3 +1,8 @@
+<?php
+  include("includes/conectar.php");
+  include("includes/funciones_utiles.php");
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -28,131 +33,42 @@
   </div>
 </div>
 
+
 <div class="container" style="margin-top: 50px;">
   <div class="row">
-    <h2>2016</h2>
+    <h2>Esta es la Lista de eventos para el 2020</h2>
   </div>
-  <div class="col-lg-9">
-  <div id="eventolista">
-    <ul style="list-style:none;">
-      <li>
-        <p class="fecha">
-          <span class="fecha-d">22</span>
-          <span class="fecha-m">JUL</span>
-        </p>
-        <h4 style="color: #db214c;margin-left: 75px; margin-bottom: 0;margin-top: 0px;">Presentación de Trabajos Finales de Recursos Humanos</h4>
-        <p style="margin-left: 75px;">19:00 hs. - Sede Estudios Superiores</p>
-      </li>
-      <li>
-        <p class="fecha">
-          <span class="fecha-d">15</span>
-          <span class="fecha-m">JUL</span>
-        </p>
-        <h4 style="color: #db214c;margin-left: 75px; margin-bottom: 0;margin-top: 0px;">Curso “Organización de Eventos”</h4>
-        <p style="margin-left: 75px;">20:00 hs. - Sede Estudios Superiores</p>
-      </li>
-      <li>
-        <p class="fecha">
-          <span class="fecha-d">03</span>
-          <span class="fecha-m">JUL</span>
-        </p>
-        <h4 style="color: #db214c;margin-left: 75px; margin-bottom: 0;margin-top: 0px;">Jornada de Tecnologías de la Información y las Comunicaciones IC 2016</h4>
-        <p style="margin-left: 75px;">17:00 hs. - Sede Estudios Superiores</p>
-      </li>
-      <li>
-        <p class="fecha">
-          <span class="fecha-d">25</span>
-          <span class="fecha-m">JUN</span>
-        </p>
-        <h4 style="color: #db214c;margin-left: 75px; margin-bottom: 0;margin-top: 0px;">Taller “De la intención a la acción”</h4>
-        <p style="margin-left: 75px;">18:30 hs. - Sede Estudios Superiores</p>
-      </li>
-      <li>
-        <p class="fecha">
-          <span class="fecha-d">12</span>
-          <span class="fecha-m">JUN</span>
-        </p>
-        <h4 style="color: #db214c;margin-left: 75px; margin-bottom: 0;margin-top: 0px;">Jornada Anual de Capacitación en Recursos Humanos de IC</h4>
-        <p style="margin-left: 75px;">17:00 hs. - Sede Estudios Superiores</p>
-      </li>
-      <li>
-        <p class="fecha">
-          <span class="fecha-d">24</span>
-          <span class="fecha-m">MAY</span>
-        </p>
-        <h4 style="color: #db214c;margin-left: 75px; margin-bottom: 0;margin-top: 0px;">Cátedra Institucional “Desarrollo Emprendedor - IC Emprende”</h4>
-        <p style="margin-left: 75px;">19:00 hs. - Sede Estudios Superiores</p>
-      </li>
-      <li>
-        <p class="fecha">
-          <span class="fecha-d">16</span>
-          <span class="fecha-m">MAY</span>
-        </p>
-        <h4 style="color: #db214c;margin-left: 75px; margin-bottom: 0;margin-top: 0px;">Taller “Incendios y Elementos de Extinción”</h4>
-        <p style="margin-left: 75px;">19:00 hs. - Sede Estudios Superiores</p>
-      </li>
-      <li>
-        <p class="fecha">
-          <span class="fecha-d">18</span>
-          <span class="fecha-m">ABR</span>
-        </p>
-        <h4 style="color: #db214c;margin-left: 75px; margin-bottom: 0;margin-top: 0px;">La exposición oral en las actividades académicas</h4>
-        <p style="margin-left: 75px;">18:30 hs. - Sede Estudios Superiores</p>
-      </li>
-      <li>
-        <p class="fecha">
-          <span class="fecha-d">06</span>
-          <span class="fecha-m">ABR</span>
-        </p>
-        <h4 style="color: #db214c;margin-left: 75px; margin-bottom: 0;margin-top: 0px;">Seminario: “Gestionar en la Adversidad”</h4>
-        <p style="margin-left: 75px;">09:00 hs. - Sede Estudios Superiores</p>
-      </li>
-      <li>
-        <p class="fecha">
-          <span class="fecha-d">25</span>
-          <span class="fecha-m">MAR</span>
-        </p>
-        <h4 style="color: #db214c;margin-left: 75px; margin-bottom: 0;margin-top: 0px;">Charla  “Relaciones Gremiales en las Organizaciones”</h4>
-        <p style="margin-left: 75px;">14:00 hs. - Sede Estudios Superiores</p>
-      </li>
-    </ul>
-  </div>
-  </div>
-  <div class="col-lg-3">
-    <div id="col-sidebar" style="height: 400px;">
-      <div id="smenu">
-        <ul style="list-style:none;">
-          <li>
-            <a href="#">
-              <p style="margin-top: 10px; margin-bottom: 2px; color: #fff;">2016</p>
-            </a>  
-          </li>
-          <li>
-            <a href="#">
-              <p style="margin-top: 10px; margin-bottom: 2px; color: #fff;">2015</p>
-            </a>  
-          </li>
-          <li>
-            <a href="#">
-              <p style="margin-top: 10px; margin-bottom: 2px; color: #fff;">2014</p>
-            </a>  
-          </li>
-          <li>
-            <a href="#">
-              <p style="margin-top: 10px; margin-bottom: 2px; color: #fff;">2013</p>
-            </a>  
-          </li>
-          <li>
-            <a href="#">
-              <p style="margin-top: 10px; margin-bottom: 2px; color: #fff;">2012</p>
-            </a>  
-          </li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
+             <?php 
+              $sql = "SELECT * FROM `eventos`";
+              $rs = mysqli_query($db, $sql);
+              if ( $rs ) {
+                while ($r = mysqli_fetch_array($rs) ) {
+              ?>
+              <br>
+              <table class="col-lg-12">
+                <tr>
+                  <td>
+                   
+                    <div id="eventolista">
+                     <ul style="list-style:none;">
+                      <li>
+                        <p class="fecha">
+                          <span class="fecha-d"><?php  echo $r["Dia"]; ?></span>
+                          <span class="fecha-m"><?php  echo $r["Mes"]; ?></span>
+                        </p>
+                        <h4 style="color: #db214c;margin-left: 75px; margin-bottom: 0;margin-top: 0px;"><?php  echo $r["TituloEvento"]; ?></h4>
+                        <p style="margin-left: 75px;"><?php  echo $r["Hora"]; ?> - <?php  echo $r["Lugar"]; ?></p>
+                      </li>
+                      </ul>
+                     
+                      </div>
+                    </td>
+                </tr>
+            </table>
+        <?php 
+         }
+       }
+     ?>
 
 <div class="clearfooter"></div>
 </div>

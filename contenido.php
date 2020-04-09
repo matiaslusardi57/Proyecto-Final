@@ -35,34 +35,35 @@ session_start();
 
 <div class="container">
   <div class="col-lg-12" style="text-align:center; margin:50px 50px;">
-    <h1>Elija si quiere dar de alta, dar de baja o modificar alguna de estas opciones</h1>
+    <h1>Que deseas publicar hoy?</h1>
   </div>
 </div>
 
 
 <div class="container" style="margin-top: 20px; margin-bottom: 50px;">
   <div class="col-lg-4">
-    <a href="abmdocentes.php"><img src="img/docente1.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmdocentes">
+    <a href="abmnoticias.php"><img src="img/noticia.png" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmdocentes">
     <center>
-      <button type="button" class="btn btn-primary">Docentes</button>
+      <button type="button" class="btn btn-primary">Noticias</button>
     </center>
     </a>
   </div>
   <div class="col-lg-4">
-    <a href="abmpadres.php"><img src="img/padres.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmpadres">
+    <a href="abmeventos.php"><img src="img/eventos.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmpadres">
     <center>
-      <button type="button" class="btn btn-primary">Padres</button>
+      <button type="button" class="btn btn-primary">Eventos</button>
     </center>
     </a>
   </div>
   <div class="col-lg-4">
-    <a href="abmalumnos.php"><img src="img/alumnos.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmalumnos">
+    <a href="abmbalances.php"><img src="img/balances.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmalumnos">
     <center>
-      <button type="button" class="btn btn-primary">Alumnos</button>
+      <button type="button" class="btn btn-primary">Balances</button>
     </center>
     </a>
   </div>
 </div>
+
   <div class="row" style="margin:20px 0;">
     <div class="col-lg-offset-5 col-lg-2">
       <a href="abmgeneral.php" role="button" class="btn btn-default btn-lg btn-block"> 

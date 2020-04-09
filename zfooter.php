@@ -48,21 +48,24 @@
                     <p>Compartir en</p>
                   </div>
                   <div class="social-share">
-                    <a href="#" style="margin-right: 10px; margin-left:10px;">
-                      <img src="img/facebook3.png" alt="facebook">
+                    <a href="https://www.facebook.com/escuela401villaamelia/" target="_blank">
+                      <img src="img/facebook3.png" alt="facebook" style="margin-right: 10px; margin-left:10px;">
                     </a>
-                    <a href="#" style="margin-right: 10px; margin-left:10px;">
-                      <img src="img/twitter.png" alt="twitter">
+                    <a href="https://twitter.com/hashtag/villasamba" target="_blank">
+                      <img src="img/twitter.png" alt="twitter" style="margin-right: 10px; margin-left:10px;">
                     </a>
-                    <a href="#" style="margin-right: 10px; margin-left:10px;">
-                      <img src="img/google-plus2.png" alt="gmail">
+                    <a href="https://n9.cl/ajxf" target="_blank">
+                      <img src="img/google-plus2.png" alt="gmail" style="margin-right: 10px; margin-left:10px;">
+                    </a>
+                      <a href="http://escuela401villaamelia.blogspot.com/" target="_blank">
+                      <img src="img/blogs.png" alt="gmail" height="34" width="34" style="margin-right: 10px; margin-left:10px;">
                     </a>
                   </div>
               </div>
             </div>
         </div>
         <div class="row" style="text-align: center; margin-top: 20px;">
-                <p> &copy; 2016 MPA. Todos los derechos reservados.</p>
+                <p> &copy; 2020 Proyecto Final UTN. Todos los derechos reservados.</p>
         </div>
         <div class="move-top-page">
       </div>

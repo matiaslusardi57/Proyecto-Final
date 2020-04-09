@@ -41,7 +41,7 @@ $admin = recuperar_admin($_SESSION['usuario']);
 
 <div class="container" style="margin-top: 20px; margin-bottom: 50px;">
   <div class="col-lg-4 col-lg-offset-1">
-    <a href="paginaadmin.php">
+    <a href="abmgeneral.php">
       <img src="img/abm.gif" class="img-responsive; text-center;" style="width: 100%; height: 250px; padding-right:30px" alt="abm">
       <center>
         <button type="button" class="btn btn-primary" style="margin-top: 20px">Alta - Baja - Modificacion</button>

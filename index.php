@@ -22,18 +22,25 @@
 </span>
 
 
-  <div class="row">
-    <div class="columns col-lg-12">
-      <img src="img/harvard3.jpg" alt="Portada" height="350"  style="width:100%;">
+<div class="container">
+  <div class="row" style="margin-top: 50px;">
+    <div class="col-lg-6">
+    <h4 style="text-align: left;">SOBRE NUESTRO QUERIDO PUEBLO..</h4>
+    <p>
+      Villa Amelia es una localidad argentina de la Provincia de Santa Fe.<br>
+      Fue fundada en las inmediaciones de la estación del ferrocarril General Belgrano, a 25 km de Rosario, hasta donde se conecta -vía ruta 16- por la Ruta Provincial 18 o la Autopista. Se ubica a 6 km de Coronel Domínguez y a 8 de Albarellos.<br>
+      Además de la actividad agropecuaria, que ocupa directa e indirectamente al 50 % de su población, las fuentes de empleo de Villa Amelia son el criadero de Paladini -emplea a unas 100 personas, algunas de ellas también de Coronel Bogado- y el microemprendimiento para el mantenimiento del corredor vial cercano que llevó adelante la comuna.<br>
+      La empresa ONAS C.A.P.S.A. (distribuidora de productos Puma Energy) tiene su sede administrativa en Villa Amelia (situada en Rivadavia 460) y además posee una estación de servicio en la localidad con domicilio en San Martín 496
+    </p>
     </div>
+    <div class="col-lg-6">
+    <img src="img/cartel.png" alt="escuela1" height="300" style="width: 100%;">
+    </div>
+
   </div>
 
-
-
-<div class="container">
-
-  <div class="row" style="margin-top: 50px;">
-  <h4 style="text-align: left;">HISTORIA</h4>
+  <div class="row" style="margin-top: 20px;">
+  <h4 style="text-align: left;">HISTORIA DE NUESTRA ESCUELA..</h4>
     <p>En la planta urbana, ubicada en la manzana N°36 se halla la escuela N°130,"25 de Mayo", fundada el 25 de abril de 1927 y su primera directora fue la señora Mercedes Horve
     de Vigil.
     Contaba por entonces con 4 salones y la casa habitacion que habitaba la Sra Directora. Las Clases se dictaban en 2 turnos. Los muebles que formaban el inventario eran 
@@ -41,8 +48,8 @@
     Desde los Comienzos se habia formado una comision  de padres que colaboraban con rifas para el mantenimiento y ampliacion de la escuela.
     </p>
   </div>
-  <div class="row">
-  <h4 style="text-align: left;">EN LA ACTUALIDAD</h4>
+  <div class="row" style="margin-top: 20px;">
+  <h4 style="text-align: left;">LA ESCUELA HOY EN DIA..</h4>
     <p>
      La escuela cuenta con 144 alumnos , 8  salones, un patio cubierto. La casa habitacion es utilizada para la enseñanza aprendizaje de los alumnos. se cuenta con un 
     laboratorio, donde los mismos desarrollan distintas actividades.
@@ -50,38 +57,51 @@
     La fiesta tradicional de la escuela se realiza el dia "25 de mayo" de cada año. 
     </p>
   </div>
-  <div class="row">
-  <h4 style="text-align: left;">MISION</h4>
-    <p>Crear, preservar y transmitir la técnica y la cultura universal en el ámbito de la tecnología.</p>
-  </div>  
-  <div class="row">
-  <h4 style="text-align: left;">VISION</h4>
-    <p>Ser una universidad integrada al medio con oferta académica diversificada y una estructura de I+D, consolidada de acuerdo a las necesidades del sector productivo regional.</p>
-  </div>
-  <div class="row">
-  <h4 style="text-align: left;">VALORES</h4>
-    <p>A tales efectos, en el contexto del mundo actual de aceleración tecnológica y concentración de los mercados, la Escuela 25 de Mayo: reivindica los valores imprescriptibles de la libertad y la dignidad del hombre, los cimientos de la cultura nacional que hacen a la identidad del pueblo argentino y a la integración armónica de los sectores sociales que la componen.
-    Sostiene como principios básicos ser:<br>
-    • Una Escuela 25 de Mayo autónoma, de gestión pública, gratuita, pluralista y laica y con ingreso irrestricto.<br>
-    • Promotora y garante de calidad académica sustentada en los principios de: libertad académica, la igualdad de oportunidades y posibilidades, jerarquización docente y la convivencia pluralista de teorías y líneas de investigación.<br>
-    • Solidaria, comprometida y en relación permanente con la comunidad a través de la generación de políticas de articulación con instituciones públicas y otras organizaciones.<br>
-    • Responsable social de promover el desarrollo nacional a través de un compromiso hacia una mejor calidad de vida de sus habitantes.<br>
-    Los fines señalados conforman un marco general en el que la Escuela 25 de Mayo desenvuelve su accionar institucional, guía el cumplimiento de sus diversas misiones y constituye un criterio orientador de los múltiples procesos evaluativos que ha desarrollado, de su planeamiento estratégico y de su autoevaluación institucional.
-    </p>
-  </div>  
-  <div class="row" style="margin-top: 20px;">
-    <div class="col-lg-6">
-      <img src="img/esc2.jpg" alt="escuela2" height="350" style="width: 100%;">
-    </div>
-    <div class="col-lg-6">
-      <img src="img/esc1.jpg" alt="escuela1" height="350" style="width: 100%;">
-    </div>
-  </div>
 </div>
 
+<div class="col-lg-8 col-lg-offset-2" style="margin-top: 50px;">
+  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
 
+      </ol>
 
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+          <img src="img/esc2.jpg" alt="escuela2" height="350" style="width: 100%;">
+          <div class="carousel-caption">
+            
+          </div>
+        </div>
+        <div class="item">
+        <img src="img/esc1.jpg" alt="escuela1" height="555" width="555" style="margin-right: 10px;margin-left: 190px;margin-top:10px ;margin-bottom:10px ;">
+          <div class="carousel-caption">
+     
+          </div>
+        </div>
+             <div class="item">
+          <img src="img/esc4.png" alt="escuela4" height="300" style="width: 85%;margin-left: 65px">
+          <div class="carousel-caption">
+     
+          </div>
+        </div>
+      </div>
 
+      <!-- Controls -->
+      <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Atras</span>
+      </a>
+      <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Siguiente</span>
+      </a>
+  </div>
+</div>
 
 <div class="clearfooter"></div>
 

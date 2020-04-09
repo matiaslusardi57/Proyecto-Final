@@ -50,7 +50,7 @@
                                         <tr>                                         
                                             <th style="text-align: center;">Grado</th>
                                             <th style="text-align: center;">Materia</th>
-                                            <th style="text-align: center;">Acciones</th>                                        
+                                            <th style="text-align: center;">Publicar</th>                                        
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -91,6 +91,13 @@ if ( $rs ) {
 ?>
                                     </tbody>
                                 </table>
+                                  <div class="col-lg-3">
+    <a href="abmmaterial.php"><img src="img/libros.png" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmalumnos">
+    <center>
+      <button type="button" class="btn btn-primary">Material</button>
+    </center>
+    </a>
+  </div>
                 </div>
             </div>
     </div>
