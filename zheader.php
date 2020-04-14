@@ -25,7 +25,7 @@
 <div class="wrapper">
 	<div class="logo">
 		<a href="index.php">
-		<img src="img/es.png" height="175" width="175" alt="logo">
+		<img src="img/EscudoP.jpg" height="150" width="150" alt="logo">
 		</a>
 	</div>		
 	<nav>
@@ -43,7 +43,7 @@ else { ?>
 <div class="wrapper">
 	<div class="logo">
 		<a href="index.php">
-		<img src="img/es.png" height="175" width="175" alt="logo">
+		<img src="img/EscudoP.jpg" height="175" width="175" alt="logo" style="margin-top: 5px">
 		</a>
 	</div>		
 	<nav>

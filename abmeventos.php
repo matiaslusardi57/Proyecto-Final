@@ -47,7 +47,7 @@ session_start();
       <table class="table table-striped table-bordered table-hover" id="dataTables-addControls">
           <thead>
            <tr>
-            <th class="col-lg-2">Fecha Publicacion</th>
+            <th class="col-lg-2">Fecha Evento</th>
             <th>Titulo</th>
             <th>Lugar</th>
             <th style="text-align: center;">Borrar</th>
@@ -95,13 +95,13 @@ session_start();
           <div class="form-group" style="margin-top: 30px;">
             <label for="titulo" class="col-sm-2 col-sm-offset-1 control-label">Titulo del Evento</label>
             <div class="col-lg-8">
-              <textarea type="text" class="form-control" name="titulo"> </textarea>
+              <textarea type="text" class="form-control" name="titulo" required=""> </textarea>
             </div>
           </div>
           <div class="form-group" style="margin-top: 40px;">
             <label for="dia" class="col-sm-2 col-sm-offset-1 control-label">Fecha</label>
           <div class="col-lg-2">
-          <select class="form-control" name="dia">
+          <select class="form-control" name="dia" required="">
                 <option>Dia</option>
                 <option>1</option>
                 <option>2</option>
@@ -137,7 +137,7 @@ session_start();
               </select>
               </div>
               <div class="col-lg-2">
-              <select class="form-control" name="mes">
+              <select class="form-control" name="mes" required="">
                 <option>MES</option>
                 <option>ENE</option>
                 <option>FEB</option>
@@ -154,7 +154,7 @@ session_start();
               </select>
               </div>
               <div class="col-lg-2">
-              <select class="form-control" name="anio" required >
+              <select class="form-control" name="anio" required="" >
                 <option>AÑO</option>
                 <option>2020</option>
                 <option>2021</option>
@@ -165,13 +165,13 @@ session_start();
             <div class="form-group" style="margin-top: 40px;">
               <label for="hora" class="col-sm-1 col-sm-offset-2 control-label">Hora</label>
                 <div class="col-lg-3">
-                 <input type="text" class="form-control" name="hora"> 
+                 <input type="text" class="form-control" name="hora" required=""> 
                 </div>
             </div>
               <div class="form-group" style="margin-top: 40px;">
               <label for="lugar" class="col-sm-1 col-sm-offset-2 control-label">Lugar</label>
                 <div class="col-lg-8">
-                 <input type="text" class="form-control" name="lugar">
+                 <input type="text" class="form-control" name="lugar" required="">
                 </div>
             </div>
           <div class="form-group" style="margin-top: 40px;margin-bottom: 30px;">

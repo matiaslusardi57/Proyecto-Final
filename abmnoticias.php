@@ -76,7 +76,7 @@ $(document).ready(function(){
         <tbody>
               <?php 
               $fechaActual = date('d-m-Y');
-              $sql = "SELECT * FROM `noticias`";
+              $sql = "SELECT * FROM `noticias` ORDER BY `idNoticia` ASC";
               $rs = mysqli_query($db, $sql);
               if ( $rs ) {
                 while ($r = mysqli_fetch_array($rs) ) {
@@ -95,7 +95,15 @@ $(document).ready(function(){
                 ?>
         </tbody>
       </table>
-
+                     <?php
+                      if (isset($_GET["e"])) {
+                      if($_GET["e"]==1) {
+                    ?><div style="text-align: center;">
+                    <h4><span><b><?php  echo "Error al subir Imagen, admite formato gif, jpeg, jpg y png";?></b></span></h4> 
+                    </div>
+                          <?php
+                        }}
+                      ?>
 <div id="flip"> 
           <div class="col-lg-12">
             <button class="btn btn-success btn-lg btn-block">Agregar Noticia</botton>
@@ -117,7 +125,7 @@ $(document).ready(function(){
                 </tr>
           </thead>
 
-      <form name="form1" method="post" action="altanoticia.php">
+      <form name="form1" method="post" action="altanoticia.php" enctype="multipart/form-data">
             <tbody>
               <tr>
                 <td class="hidden"> 
@@ -126,24 +134,18 @@ $(document).ready(function(){
                 </td>
                 <td>
                   <label for="titulo"></label>
-                  <textarea type="text" name="titulo" id="titulo" cols="30%" rows="3" placeholder="Titulo" required></textarea>
+                  <textarea type="text" name="titulo" id="titulo" style="margin: 0px; width: 225px; height: 192px;" placeholder="Titulo" required></textarea>
                 </td>
                 <td>
                   <label for="contenido"></label>
-                  <textarea name="contenido" id="contenido" cols="40%" rows="7" placeholder="Ingrese el cuerpo de la noticia..."></textarea> 
+                  <textarea name="contenido" id="contenido" style="margin: 0px; width: 358px; height: 356px;" placeholder="Ingrese el cuerpo de la noticia..." required=""></textarea> 
                 </td>
-                <td >
-            <form name="MiForm" id="MiForm" method="post" action="cargaimagen.php?idNoticia=<?php echo $r["idNoticia"] ?>" enctype="multipart/form-data">
-        <h4 class="text-center">Seleccione imagen a cargar</h4>
-        <div class="form-group">
-          <label class="col-sm-2 control-label">Archivos</label>
-          <div class="col-sm-8">
-            <input type="file" class="form-control" id="image" name="image" multiple>
-          </div>
-          <button name="submit" class="btn btn-primary">Cargar Imagen</button>
-        </div>
-      </form>
-                    </form>
+                <td>
+                      <br><br>
+                      <label for="imagen" style="text-align: center;">Foto</label>
+                      <div>
+                        <input type="file" id="imagen" name="imagen" multiple required="">
+                      </div>
                 </td>
                    <td>
                   <input type="submit" value="Confirmar" class="btn btn-primary" name="confirmar" id="confirmar"style="text-align: center; margin-top: 70px; margin-bottom: 20px">
