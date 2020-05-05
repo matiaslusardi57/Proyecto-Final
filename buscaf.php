@@ -14,6 +14,15 @@ $docente = recuperar_docente($_SESSION['usuario']);
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <header>
@@ -37,7 +46,7 @@ $docente = recuperar_docente($_SESSION['usuario']);
 <div class="caja3">
 
 
-<form class="form-horizontal" action="buscaalumno.php" method="get">
+<form class="form-horizontal" action="buscaalumno.php" method="get" autocomplete="off">
   <div class="form-group">
     <label for="inputPassword3" class="col-lg-offset-2 col-lg-2 control-label">Nombre/Apellido</label>
     <div class="col-lg-4">
@@ -53,7 +62,7 @@ $docente = recuperar_docente($_SESSION['usuario']);
 </form>
       <div class="row" style="margin:20px 0;">
           <div class="col-lg-offset-5 col-lg-2">
-           <a href="docente1.php" role="button" class="btn btn-default btn-lg btn-block"> 
+           <a href="catedras.php" role="button" class="btn btn-default btn-lg btn-block"> 
             <p style="margin: 3px 0;">Volver</p>
            </a>
           </div>

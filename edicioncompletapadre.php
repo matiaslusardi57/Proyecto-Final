@@ -27,10 +27,11 @@ $dni = $_POST['dni'];
 $nomyap = $_POST['nomyap'];
 $direccion = $_POST['direccion'];
 $telefono = $_POST['telefono'];
+$con = $_POST['Contrasena'];
 
 
 //Arma la instrucción SQL y luego la ejecuta
-$sql = "UPDATE padre set DNI_padre='$dni', NombreApellido='$nomyap', Direccion='$direccion', Telefono='$telefono'
+$sql = "UPDATE padre set DNI_padre='$dni', NombreApellido='$nomyap', Direccion='$direccion', Telefono='$telefono', Contrasena='$con'
  		where DNI_padre='$dni'
 		";
 

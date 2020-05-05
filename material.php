@@ -1,3 +1,8 @@
+<?php
+  include("includes/conectar.php");
+  include("includes/funciones_utiles.php");
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -6,6 +11,21 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+	 <script language=javascript>
+  function ventanasecundaria (idMaterial) {
+    window.open("veronlinematerial.php?idMaterial=" + idMaterial);
+  }
+  </script>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
 </head>
 <header>
   <?php
@@ -21,190 +41,50 @@
 			Desde los siguientes enlaces podrá acceder al material de estudios.
 		</p>
 	</div>
-	<div class="row" style="margin-top: 50px;">
+	<br>
+   <?php 
+             $sql0 =  "SELECT DISTINCT `Descripcion`, `Cod_materia` FROM `materia`" ;
+                $rs0 = mysqli_query($db, $sql0);
+              if ( $rs0 ) {
+                while ($r0 = mysqli_fetch_array($rs0) ) {
+  ?>
+
+
+	
 		<div class="panel-group" id="accordion" role="tablist">
 			<div class="panel panel-primary">
 				<div class="panel-heading" rol="tab" id="heading1">
 					<h4 class="panel-title">
-						<a href="#collapse1" data-toggle="collapse" data-parent="#accordion">
-							Matematica
+						<a href="#<?php  echo $r0["Cod_materia"]; ?>" data-toggle="collapse" data-parent="#accordion">
+							 <?php  echo $r0["Descripcion"];
+				                $codigo = $r0["Cod_materia"];
+				               ?>
 						</a>
 					</h4>
 				</div>
-				<div id="collapse1" class="panel-collapse collapse">
+				<div id="<?php  echo $r0["Cod_materia"]; ?>" class="panel-collapse collapse">
 					<div class="panel-body">
-						<a href="#">Matematica - Capitulo 1</a><br>
-						<a href="#">Matematica - Capitulo 2</a><br>
-						<a href="#">Matematica - Capitulo 3</a><br>
-						<a href="#">Matematica - Capitulo 4</a><br>
-						<a href="#">Matematica - Capitulo 5</a><br>
-						<a href="#">Matematica - Capitulo 6</a><br>
-						<a href="#">Matematica - Capitulo 7</a>
+						   <?php 
+		              $sql = "SELECT * FROM `materiales` WHERE `Materia_Cod_materia` = $codigo ORDER BY `Grado_Nro_grado`";
+		              $rs = mysqli_query($db, $sql);
+		              if ( $rs ) {
+		                while ($r = mysqli_fetch_array($rs) ) {
+		              ?>
+		<a href="javascript:ventanasecundaria('<?php echo $r["idMaterial"]; ?>')"><span>Año:</span>  <?php  echo $r["Grado_Nro_grado"]; ?>°  -- <span> Materia:</span> <?php  echo $r0["Descripcion"]; ?>  -- <span> Descripcion:</span> <?php  echo $r["Descripcion"]; ?> -<span> Ver Material </span></a><br>
+		  <?php 
+                  }
+                }
+                ?>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	<?php 
 
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel-group" id="accordion" role="tablist">
-			<div class="panel panel-primary">
-				<div class="panel-heading" rol="tab" id="heading2">
-					<h4 class="panel-title">
-						<a href="#collapse2" data-toggle="collapse" data-parent="#accordion">
-							Lengua
-						</a>
-					</h4>
-				</div>
-				<div id="collapse2" class="panel-collapse collapse">
-					<div class="panel-body">
-						<a href="#">Lengua - Tomo 1</a><br>
-						<a href="#">Lengua - Tomo 2</a><br>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel-group" id="accordion" role="tablist">
-			<div class="panel panel-primary">
-				<div class="panel-heading" rol="tab" id="heading3">
-					<h4 class="panel-title">
-						<a href="#collapse3" data-toggle="collapse" data-parent="#accordion">
-							Quimica
-						</a>
-					</h4>
-				</div>
-				<div id="collapse3" class="panel-collapse collapse">
-					<div class="panel-body">
-						<a href="#">Quimica - Indice de Contenidos</a><br>
-						<a href="#">Quimica - Capitulo 1</a><br>
-						<a href="#">Quimica - Capitulo 2</a><br>
-						<a href="#">Quimica - Capitulo 3</a><br>
-						<a href="#">Quimica - Capitulo 4</a><br>
-						<a href="#">Quimica - Capitulo 5</a><br>
-						<a href="#">Quimica - Capitulo 6</a><br>
-						<a href="#">Quimica - Capitulo 7</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel-group" id="accordion" role="tablist">
-			<div class="panel panel-primary">
-				<div class="panel-heading" rol="tab" id="heading4">
-					<h4 class="panel-title">
-						<a href="#collapse4" data-toggle="collapse" data-parent="#accordion">
-							Ingles
-						</a>
-					</h4>
-				</div>
-				<div id="collapse4" class="panel-collapse collapse">
-					<div class="panel-body">
-						<a href="#">Ingles I</a><br>
-						<a href="#">Ingles II</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel-group" id="accordion" role="tablist">
-			<div class="panel panel-primary">
-				<div class="panel-heading" rol="tab" id="heading5">
-					<h4 class="panel-title">
-						<a href="#collapse5" data-toggle="collapse" data-parent="#accordion">
-							Historia
-						</a>
-					</h4>
-				</div>
-				<div id="collapse5" class="panel-collapse collapse">
-					<div class="panel-body">
-						<a href="#">Historia Argentina I</a><br>
-						<a href="#">Historia Argentina II</a><br>
-						<a href="#">Historia de America I</a><br>
-						<a href="#">Historia de America II</a><br>
-						<a href="#">Historia de Europa I</a><br>
-						<a href="#">Historia de Europa II</a><br>
-						<a href="#">Historia de Asia y Africa I</a><br>
-						<a href="#">Historia de Asia y Africa II</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel-group" id="accordion" role="tablist">
-			<div class="panel panel-primary">
-				<div class="panel-heading" rol="tab" id="heading6">
-					<h4 class="panel-title">
-						<a href="#collapse6" data-toggle="collapse" data-parent="#accordion">
-							Geografia
-						</a>
-					</h4>
-				</div>
-				<div id="collapse6" class="panel-collapse collapse">
-					<div class="panel-body">
-						<a href="#">Geografia - Indice de Contenidos</a><br>
-						<a href="#">Geografia - Capitulo 1</a><br>
-						<a href="#">Geografia - Capitulo 2</a><br>
-						<a href="#">Geografia - Capitulo 3</a><br>
-						<a href="#">Geografia - Capitulo 4</a><br>
-						<a href="#">Geografia - Capitulo 5</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel-group" id="accordion" role="tablist">
-			<div class="panel panel-primary">
-				<div class="panel-heading" rol="tab" id="heading7">
-					<h4 class="panel-title">
-						<a href="#collapse7" data-toggle="collapse" data-parent="#accordion">
-							Contabilidad
-						</a>
-					</h4>
-				</div>
-				<div id="collapse7" class="panel-collapse collapse">
-					<div class="panel-body">
-						<a href="#">Introduccion a la Contabilidad - Indice de Contenidos</a><br>
-						<a href="#">Introduccion a la Contabilidad - Capitulo 1</a><br>
-						<a href="#">Introduccion a la Contabilidad - Capitulo 2</a><br>
-						<a href="#">Introduccion a la Contabilidad - Capitulo 3</a><br>
-						<a href="#">Introduccion a la Contabilidad - Capitulo 4</a><br>
-						<a href="#">Introduccion a la Contabilidad - Capitulo 5</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel-group" id="accordion" role="tablist">
-			<div class="panel panel-primary">
-				<div class="panel-heading" rol="tab" id="heading8">
-					<h4 class="panel-title">
-						<a href="#collapse8" data-toggle="collapse" data-parent="#accordion">
-							Derecho
-						</a>
-					</h4>
-				</div>
-				<div id="collapse8" class="panel-collapse collapse">
-					<div class="panel-body">
-						<a href="#">Derecho - Indice de Contenidos</a><br>
-						<a href="#">Derecho - Capitulo 1</a><br>
-						<a href="#">Derecho - Capitulo 2</a><br>
-						<a href="#">Derecho - Capitulo 3</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="panel-group" id="accordion" role="tablist">
-			<div class="panel panel-primary">
-				<div class="panel-heading" rol="tab" id="heading9">
-					<h4 class="panel-title">
-						<a href="#collapse9" data-toggle="collapse" data-parent="#accordion">
-							Formacion Etica
-						</a>
-					</h4>
-				</div>
-				<div id="collapse9" class="panel-collapse collapse">
-					<div class="panel-body">
-						<a href="#">Formacion Etica y Ciudadana - Tomo I</a><br>
-						<a href="#">Formacion Etica y Ciudadana - Tomo II</a><br>
-						<a href="#">Formacion Etica y Ciudadana - Tomo III</a>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+                }
+              }
+ ?>
 </div>
 
 <div class="clearfooter"></div>

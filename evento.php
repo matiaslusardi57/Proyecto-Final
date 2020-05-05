@@ -11,6 +11,16 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
 	
 </head>
 <header>
@@ -33,13 +43,28 @@
   </div>
 </div>
 
-
 <div class="container" style="margin-top: 50px;">
+   <?php 
+             $sql0 =  "SELECT DISTINCT Anio FROM `eventos` order by Anio" ;
+                $rs0 = mysqli_query($db, $sql0);
+              if ( $rs0 ) {
+                while ($r0 = mysqli_fetch_array($rs0) ) {
+  ?>
+
+
+
+
   <div class="row">
-    <h2>Esta es la Lista de eventos para el 2020</h2>
+    <h2>Listado de Eventos año <?php  echo $r0["Anio"];
+                $este = $r0["Anio"];
+            
+               ?></h2>
   </div>
+
+
+
              <?php 
-              $sql = "SELECT * FROM `eventos`";
+              $sql = "SELECT * FROM `eventos` WHERE `Anio` LIKE '%$este' ORDER BY `idEvento`";
               $rs = mysqli_query($db, $sql);
               if ( $rs ) {
                 while ($r = mysqli_fetch_array($rs) ) {
@@ -67,6 +92,8 @@
             </table>
         <?php 
          }
+           }
+            }
        }
      ?>
 

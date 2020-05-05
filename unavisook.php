@@ -18,6 +18,15 @@ $docente = recuperar_docente($_SESSION['usuario']);
       <link rel="stylesheet" href="js/themes/smoothness/jquery-ui.css">
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="estilo.css">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
   <script>
   $.datepicker.regional['es'] = {
    closeText: 'Cerrar',
@@ -92,7 +101,7 @@ while (($fila=mysqli_fetch_row($resul))==true) {
                                         </tr>
                                     </thead>
 
-                                    <form name="form6" method="post" action="agregaaviso.php?DNI_Alumno=<?php echo $c; ?>">
+                                    <form name="form6" method="post" action="agregaaviso.php?DNI_Alumno=<?php echo $c; ?>" autocomplete="off">
                                     <tbody>
 
                              

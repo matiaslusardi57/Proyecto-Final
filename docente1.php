@@ -14,6 +14,15 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <header>
@@ -34,106 +43,32 @@
 <h1>Hola <?php echo $docente['NombreApellido'] ?></h1>
 </div>
 </div>
-    <div class="caja3">
-    <div class="caja4">
-         <div class="row"> 
-         <div class="col-lg-offset-4 col-lg-4">
-         <a class="btn btn-primary btn-lg btn-block" href="buscaf.php" role="button">Avisos particulares para alumnos</a>
-         </div>
-         </div>
-         </div>
- 
-            <div class="row">
-                <div class="col-md-8 col-md-offset-2">
-                             <table class="table table-striped table-bordered table-hover" id="dataTables-addControls">
-                                    <thead>
-                                        <tr>                                         
-                                            <th style="text-align: center;">Grado</th>
-                                            <th style="text-align: center;">Materia</th>
-                                            <th style="text-align: center;">Publicar</th>                                        
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-<?php 
-
-$z=$docente['DNI_docente'];
-
-$sql = "select distinct m.`Descripcion`,m.`Grado_Nro_grado`,m.`Cod_materia`
-FROM `materia` m
-inner join `grado` g
-on m.`Grado_Nro_grado`= g.`Nro_grado`
-inner join `vinculo` v
-on g.`Nro_grado`= v.`Grado_Nro_grado`
-inner join `docente`d
-on v.`Docente_DNI_docente`= d.`DNI_docente`
-where m.`Docente_DNI_docente`=$z 
-order by m.`Grado_Nro_grado` asc ";
-
-$rs = mysqli_query($db, $sql);
-if ( $rs ) {
-  while ($r = mysqli_fetch_array($rs) ) {
-?>
-                                        <tr>
-                     
-                                          <td><?php  echo $r["1"]; ?></td>                                          
-                                          <td><?php  echo $r["0"]; ?></td>
-                                          <td style="text-align: center;">
-                                            <button type="button" class="btn btn-success" onClick="agregatarea(<?php echo $r["Cod_materia"].','.$r["Grado_Nro_grado"] ?>)" style="margin:0 5px;">Tarea</button>
-                                            <button type="button" class="btn btn-success" onClick="agregaexamen(<?php echo $r["Cod_materia"].','.$r["Grado_Nro_grado"] ?>)"style="margin:0 5px;">Examen</button>
-                                            <button type="button" class="btn btn-success" onClick="agregapractico(<?php echo $r["Cod_materia"].','.$r["Grado_Nro_grado"] ?>)"style="margin:0 5px;">Practico</button>
-                                            <button type="button" class="btn btn-warning" onClick="agregacomunicado(<?php echo $r["Grado_Nro_grado"] ?>)"style="margin:0 5px;">Comunicados</button>
-                                          </td>
-                       
-                    </tr>
-<?php 
-  }
-}
-?>
-                                    </tbody>
-                                </table>
-                                  <div class="col-lg-3">
-    <a href="abmmaterial.php"><img src="img/libros.png" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmalumnos">
-    <center>
-      <button type="button" class="btn btn-primary">Material</button>
-    </center>
-    </a>
+  <br><br>
+  <div class="container" style="margin-top: 20px; margin-bottom: 50px;">
+      <div class="col-lg-3" style="margin-left: 40px;">
+        <a href="catedras.php"><img src="img/pizarra.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmalumnos">
+        <center>
+          <button type="button" class="btn btn-primary">Mis Catedras</button>
+        </center>
+        </a>
+      </div>
+      <div class="col-lg-3 col-lg-offset-1">
+        <a href="abmmaterial.php"><img src="img/libros.png" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmalumnos">
+        <center>
+          <button type="button" class="btn btn-primary">Publicar Material</button>
+        </center>
+        </a>
+      </div>
+        <div class="col-lg-3 col-lg-offset-1">
+        <a href=""><img src="img/libretaonline.png" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmalumnos">
+        <center>
+          <button type="button" class="btn btn-primary">Libreta Online</button>
+        </center>
+        </a>
+      </div>
   </div>
-                </div>
-            </div>
-    </div>
 
 
-
-    <script>
-    $(document).ready(function() {
-        $('#dataTables-addControls').dataTable();
-    });
-
-  function agregatarea(Cod_materia,Grado_Nro_grado) {
-  location.href ="agregatarea.php?Cod_materia=" + Cod_materia + "&Grado_Nro_grado=" + Grado_Nro_grado;
-
-
-  }
-
-  function agregaexamen(Cod_materia,Grado_Nro_grado) {
-    location.href ="agregaexamen.php?Cod_materia=" + Cod_materia + "&Grado_Nro_grado=" + Grado_Nro_grado;
-
-  }
-
-
-  function agregapractico(Cod_materia,Grado_Nro_grado) {
-    location.href ="agregapractico.php?Cod_materia=" + Cod_materia + "&Grado_Nro_grado=" + Grado_Nro_grado;
-  }
-
-  function agregacomunicado(Grado_Nro_grado) {
-    location.href ="agregacomunicado.php?Grado_Nro_grado=" + Grado_Nro_grado;
-  }
-
-  
-    </script>
-
-
- 
   <div class="clearfooter"></div>
   </div>
 

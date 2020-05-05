@@ -16,6 +16,16 @@
     window.open("veronlinebalance.php?idBalance=" + idBalance);
   }
   </script>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
 	
 </head>
 <header>
@@ -38,7 +48,7 @@
   </div>
 
    <?php 
-             $sql0 =  "SELECT DISTINCT Anio FROM `balances`" ;
+             $sql0 =  "SELECT DISTINCT Anio FROM `balances` order by Anio" ;
                 $rs0 = mysqli_query($db, $sql0);
               if ( $rs0 ) {
                 while ($r0 = mysqli_fetch_array($rs0) ) {
@@ -69,7 +79,7 @@
           </thead>
         <tbody>
               <?php 
-              $sql = "SELECT * FROM `balances` WHERE `Fecha` LIKE '%$este'";
+              $sql = "SELECT * FROM `balances` WHERE `Fecha` LIKE '%$este' order by idBalance";
               $rs = mysqli_query($db, $sql);
               if ( $rs ) {
                 while ($r = mysqli_fetch_array($rs) ) {

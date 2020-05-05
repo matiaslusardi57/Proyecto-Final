@@ -16,10 +16,19 @@ session_start();
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Seguimiento</title>
+	<title>Edita</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <header>
@@ -74,6 +83,12 @@ $fila = mysqli_fetch_array($resultado);
             <label for="telefono" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Telefono</label>
                 <div class="col-lg-8">
                   <input type="number" REQUIRED class="form-control" name="telefono" value="<?php echo($fila['Telefono']); ?>">
+                </div>
+        </div>    
+        <div class="form-group">
+            <label for="Contrasena" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Contraseña</label>
+                <div class="col-lg-8">
+                  <input type="text" REQUIRED class="form-control" name="Contrasena" value="<?php echo($fila['Contrasena']); ?>">
                 </div>
         </div>
         <div class="form-group" style="margin-top: 20px;">
