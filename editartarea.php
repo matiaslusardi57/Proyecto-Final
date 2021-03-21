@@ -16,11 +16,20 @@ session_start();
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Seguimiento</title>
+	<title>Editar Tarea</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 	<link rel="stylesheet" href="js/themes/smoothness/jquery-ui.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 	<script src="js/jquery-1.12.2.js"></script>
     <script src="js/bootstrap.min.js"></script>  
     <script src="js/jquery-ui.js"></script>
@@ -90,13 +99,13 @@ $fila = mysqli_fetch_array($resultado);
                 </div>
         </div>
         <div class="form-group">
-            <label for="dni" class="col-lg-3 control-label" style="text-align: center;">Numero</label>
+            <label for="dni" class="col-lg-3 control-label" style="text-align: center;">Nro.</label>
                 <div class="col-lg-8">
                   <input type="number" REQUIRED class="form-control" name="numero" value="<?php echo($fila['Numero']); ?>">
                 </div>
         </div>
         <div class="form-group">
-            <label for="nomyap" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Fecha</label>
+            <label for="nomyap" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Fecha de Entrega</label>
                 <div class="col-lg-8">
                   <input type="text" REQUIRED class="form-control" name="fecha" id="datepicker" value="<?php echo($fila['Fecha_entrega_tarea']); ?>">
                 </div>
@@ -120,7 +129,7 @@ $fila = mysqli_fetch_array($resultado);
                 </div>
         </div>
         <div class="form-group" style="margin-top: 20px;">
-            <div class="col-lg-offset-3 col-lg-6">
+            <div class="col-lg-offset-3 col-lg-8">
                 <input type="submit" value="Editar" class="btn btn-success btn-lg btn-block">
             </div>
         </div>
@@ -128,7 +137,7 @@ $fila = mysqli_fetch_array($resultado);
 </div>
 
 
-<div class="col-lg-6 col-lg-offset-3" style="margin-top: 20px; margin-bottom: 20px;">
+<div class="col-lg-8 col-lg-offset-3" style="margin-top: 20px; margin-bottom: 20px;">
       <button class="btn btn-primary btn-lg btn-block" onclick="volver(<?php echo "$cm".','."$nm" ?>)">Volver</botton>
 </div>
 

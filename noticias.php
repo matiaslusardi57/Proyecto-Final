@@ -13,6 +13,16 @@
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 	<script src="http://code.jquery.com/jquery-latest.js"></script>
  	<script src="js/arriba.js"></script>
+ 	<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
 	
 </head>
 <header>
@@ -39,11 +49,11 @@
                 while ($r = mysqli_fetch_array($rs) ) {
               ?>
 
-		<div class="col-lg-5" style="margin-right: 90px">
+		<div class="col-lg-5" style="margin-right: 90px; margin-top:30px;background:#F6C182;border-radius: 10px">
 			<h4 style="text-align: center;"><?php  echo $r["Titulo"]; ?></h4>
 			<img src="<?php  echo $r["Imagen"]; ?>" alt="noticia1" class="img-thumbnail">
 			<br>
-			<p> Fecha Publicacion : 
+			<p> Fecha de Publicación: 
 			<?php  echo $r["Fecha"]; ?>
 			</p>
 			<div class="col-lg-12" style="text-align: center;">
@@ -66,7 +76,7 @@
 								<p style="margin-top: 10px;">
 								<?php  echo $r["Contenido"]; ?>
 								</p><br>
-								<h5 style="text-align: right;"> Fecha Publicacion : 
+								<h5 style="text-align: right;"> Fecha de Publicación: 
 								<?php  echo $r["Fecha"]; ?>
 								</h5>
 							</div>

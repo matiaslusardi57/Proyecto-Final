@@ -18,10 +18,19 @@ session_start();
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>ABM</title>
+	<title>ABM Balances</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
       <script language=javascript>
   function ventanasecundaria (idBalance) {
     window.open("balances.php?");
@@ -48,7 +57,7 @@ session_start();
       <table class="table table-striped table-bordered table-hover" id="dataTables-addControls">
           <thead>
            <tr>
-            <th class="col-lg-2">Fecha Publicacion</th>
+            <th class="col-lg-2">Fecha de Publicación</th>
             <th>Comentario</th>
             <th>Archivo</th>
             <th style="text-align: center;">Borrar</th>
@@ -57,7 +66,7 @@ session_start();
         <tbody>
               <?php 
               $fechaActual = date('d-m-Y');
-              $sql = "SELECT * FROM `balances`";
+              $sql = "SELECT * FROM `balances` order by Anio, idBalance";
               $rs = mysqli_query($db, $sql);
               if ( $rs ) {
                 while ($r = mysqli_fetch_array($rs) ) {
@@ -92,7 +101,7 @@ session_start();
     <div class="modal-content">
       <form class="form-horizontal" name="form1" method="post" action="altabalance.php" enctype="multipart/form-data">
          <div style="text-align:center;margin-top: 50px;">
-         <h4>Complete los datos</h4>
+         <h4>Complete los Datos</h4>
         </div>
           <div class="hidden">
               <input type="text" class="form-control" name="fecha" value="<?php echo $fechaActual ?>">
@@ -127,7 +136,7 @@ session_start();
 
   <div class="row" style="margin:20px 0;">
     <div class="col-lg-offset-3 col-lg-2">
-      <a href="contenido.php" role="button" class="btn btn-default btn-lg btn-block"> 
+      <a href="contenido.php" role="button" class="btn btn-primary btn-lg btn-block"> 
         <p style="margin: 3px 0;">Volver</p>
       </a>
     </div>

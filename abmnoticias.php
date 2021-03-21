@@ -18,10 +18,19 @@ session_start();
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>ABM</title> 
+	<title>ABM Noticias</title> 
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
   <style> 
 #panel, #flip {
   padding: 5px;
@@ -68,8 +77,8 @@ $(document).ready(function(){
       <table class="table table-striped table-bordered table-hover" id="dataTables-addControls">
           <thead>
            <tr>
-            <th class="col-lg-2">Fecha Publicacion</th>
-            <th>Titulo</th>
+            <th class="col-lg-2">Fecha Publicación</th>
+            <th>Título</th>
             <th style="text-align: center;">Borrar</th>
             </tr>
           </thead>
@@ -118,7 +127,7 @@ $(document).ready(function(){
             <thead>
                 <tr>
                   <th class="hidden">Fecha</th>
-                  <th style="text-align:center;">Titulo</th>
+                  <th style="text-align:center;">Título</th>
                   <th style="text-align:center;">Contenido</th>
                   <th style="text-align:center;">Imagen</th>
                   <th style="text-align:center;">Confirmar</th>
@@ -169,7 +178,7 @@ $(document).ready(function(){
 
   <div class="row" style="margin:20px 0;">
     <div class="col-lg-offset-5 col-lg-2">
-      <a href="contenido.php" role="button" class="btn btn-default btn-lg btn-block"> 
+      <a href="contenido.php" role="button" class="btn btn-primary btn-lg btn-block"> 
         <p style="margin: 3px 0;">Volver</p>
       </a>
     </div>

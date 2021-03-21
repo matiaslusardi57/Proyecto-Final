@@ -11,10 +11,19 @@ $admin = recuperar_admin($_SESSION['usuario']);
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Inicio ADM</title>
+	<title>Principal Administrador</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <header>
@@ -40,7 +49,7 @@ $admin = recuperar_admin($_SESSION['usuario']);
 </div>
 
 <div class="container" style="margin-top: 20px; margin-bottom: 50px;">
-  <div class="col-lg-4 col-lg-offset-1">
+  <div class="col-lg-3">
     <a href="abmgeneral.php">
       <img src="img/abm.gif" class="img-responsive; text-center;" style="width: 100%; height: 250px; padding-right:30px" alt="abm">
       <center>
@@ -48,11 +57,27 @@ $admin = recuperar_admin($_SESSION['usuario']);
       </center>
     </a>
   </div>
-  <div class="col-lg-4 col-lg-offset-2">
+  <div class="col-lg-3">
     <a href="vinculouno.php">
       <img src="img/vinculo1.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px; padding-left:30px" alt="vincular">
       <center>
         <button type="button" class="btn btn-primary" style="margin-top: 20px">Vinculaciones</button>
+      </center>
+    </a>
+  </div>
+    <div class="col-lg-3">
+    <a href="verificafirma.php">
+      <img src="img/libretaonline.png" class="img-responsive; text-center;" style="width: 100%; height: 250px; padding-left:30px" alt="vincular">
+      <center>
+        <button type="button" class="btn btn-primary" style="margin-top: 20px">Libreta Online</button>
+      </center>
+    </a>
+  </div>
+      <div class="col-lg-3">
+    <a href="generales.php">
+      <img src="img/listadosAdmin.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px; padding-left:30px" alt="vincular">
+      <center>
+        <button type="button" class="btn btn-primary" style="margin-top: 20px">Listados Generales</button>
       </center>
     </a>
   </div>

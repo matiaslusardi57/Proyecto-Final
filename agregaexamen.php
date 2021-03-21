@@ -11,10 +11,19 @@ $docente = recuperar_docente($_SESSION['usuario']);
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>agrega examen</title>
+	<title>Exámenes</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
   <script language=javascript>
   function ventanasecundaria (idExamen) {
     window.open("veronline.php?idExamen=" + idExamen);
@@ -67,7 +76,7 @@ $resultado=mysqli_query($db,$consulta);
 </div>
 <br>
 <div class="row" style="margin-top: 20px; text-align:center;">
-      <?php echo "<p style='color:red;'>* Error al subir el archivo</p>"; ?> 
+      <?php echo "<p style='color:red;'>* Error al subir el archivo, solo extensiones PDF</p>"; ?> 
 </div>
             <div class="row">
                 <div class="col-lg-12">
@@ -75,8 +84,8 @@ $resultado=mysqli_query($db,$consulta);
                                     <thead>
                                         <tr>
                                          
-                                            <th style="text-align: center;">Nro</th>
-                                            <th style="text-align: center;">Fecha</th>
+                                            <th style="text-align: center;">Nro.</th>
+                                            <th style="text-align: center;">Fecha de Examen</th>
                                             <th style="text-align: center;">Temas</th>
                                             <th style="text-align: center;">Nota</th>
                                             <th style="text-align: center;">Acciones</th>
@@ -130,12 +139,12 @@ if ( $rs ) {
                 
          <div class="row"> 
          <div class="col-sm-offset-2 col-lg-8">
-         <button type="button" class="btn btn-primary btn-lg btn-block" onClick="agregae(<?php echo $cm.','.$nm; ?>)">Agregar Otro</button>
+         <button type="button" class="btn btn-success btn-lg btn-block" onClick="agregae(<?php echo $cm.','.$nm; ?>)">Agregar Otro</button>
          </div>
          </div>
         <div class="row" style="margin:20px 0;">
           <div class="col-lg-offset-5 col-lg-2">
-           <a href="docente1.php" role="button" class="btn btn-default btn-lg btn-block"> 
+           <a href="catedras.php" role="button" class="btn btn-primary btn-sm btn-block"> 
             <p style="margin: 3px 0;">Volver</p>
            </a>
           </div>
@@ -227,8 +236,8 @@ $resultado=mysqli_query($db,$consulta);
                                     <thead>
                                         <tr>
                                          
-                                            <th style="text-align: center;">Nro</th>
-                                            <th style="text-align: center;">Fecha</th>
+                                            <th style="text-align: center;">Nro.</th>
+                                            <th style="text-align: center;">Fecha de Examen</th>
                                             <th style="text-align: center;">Temas</th>
                                             <th style="text-align: center;">Nota</th>
                                             <th style="text-align: center;">Acciones</th>
@@ -282,12 +291,12 @@ if ( $rs ) {
                 
          <div class="row"> 
          <div class="col-sm-offset-2 col-lg-8">
-         <button type="button" class="btn btn-primary btn-lg btn-block" onClick="agregae(<?php echo $cm.','.$nm; ?>)">Agregar Otro</button>
+         <button type="button" class="btn btn-success btn-lg btn-block" onClick="agregae(<?php echo $cm.','.$nm; ?>)">Agregar Otro</button>
          </div>
          </div>
          <div class="row" style="margin:20px 0;">
           <div class="col-lg-offset-5 col-lg-2">
-           <a href="docente1.php" role="button" class="btn btn-default btn-lg btn-block"> 
+           <a href="catedras.php" role="button" class="btn btn-primary btn-sm btn-block"> 
             <p style="margin: 3px 0;">Volver</p>
            </a>
           </div>

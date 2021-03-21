@@ -15,7 +15,7 @@ $nm=$_GET["Grado_Nro_grado"];
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Una tarea</title>
+  <title>Nueva Tarea</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
         <script src="js/jquery-1.12.2.js"></script>
      <script src="js/bootstrap.min.js"></script>  
@@ -23,6 +23,15 @@ $nm=$_GET["Grado_Nro_grado"];
       <link rel="stylesheet" href="js/themes/smoothness/jquery-ui.css">
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="estilo.css">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
   <script>
   $.datepicker.regional['es'] = {
    closeText: 'Cerrar',
@@ -78,10 +87,10 @@ $nm=$_GET["Grado_Nro_grado"];
                                     <thead>
                                         <tr>
                                          
-                                            <th style="text-align:center;">Nro</th>
-                                            <th style="text-align:center;">Para el</th>
+                                            <th style="text-align:center;">Nro.</th>
+                                            <th style="text-align:center;">Fecha de Entrega</th>
                                             <th style="text-align:center;">Contenido</th>
-                                            <th class="hidden">Correccion</th>
+                                            <th class="hidden">Corrección</th>
                                             <th class="hidden">Codigomateria</th>
                                             <th class="hidden">Numerogrado</th>
                                             <th style="text-align:center;">Confirmar</th>
@@ -90,7 +99,7 @@ $nm=$_GET["Grado_Nro_grado"];
                                         </tr>
                                     </thead>
 
-                                    <form name="form1" method="post" action="agregatarea.php?Grado_Nro_grado=<?php echo $nm; ?>&Cod_materia=<?php echo $cm; ?>">
+                                    <form name="form1" method="post" action="agregatarea.php?Grado_Nro_grado=<?php echo $nm; ?>&Cod_materia=<?php echo $cm; ?>" autocomplete="off">
                                     <tbody>
                                         <tr>
                                           <td> 

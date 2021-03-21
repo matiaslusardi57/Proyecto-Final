@@ -11,10 +11,19 @@
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>agrega practico</title>
+	<title>Prácticos</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
   <script language=javascript>
   function ventanasecundaria (idPracticos) {
     window.open("veronlinepractico.php?idPracticos=" + idPracticos);
@@ -65,7 +74,7 @@ $resultado=mysqli_query($db,$consulta);
     <h2><?php echo $nm ?>°  -  <?php echo $mg['Descripcion'] ?>  - Practico</h2>
   </div>  <br>
     <div class="row" style="margin-top: 20px; text-align:center;">
-      <?php echo "<p style='color:red;'>* Error al subir el archivo</p>"; ?> 
+      <?php echo "<p style='color:red;'>* Error al subir el archivo, solo extensiones PDF</p>"; ?> 
     </div>
  
             <div class="row">
@@ -73,10 +82,10 @@ $resultado=mysqli_query($db,$consulta);
                              <table class="table table-striped table-bordered table-hover" id="dataTables-addControls" style="text-align:center;">
                                     <thead>
                                         <tr>
-                                            <th style="text-align: center;">Nro</th>
-                                            <th style="text-align: center;">Fecha Entrega</th>
+                                            <th style="text-align: center;">Nro.</th>
+                                            <th style="text-align: center;">Fecha de Entrega</th>
                                             <th style="text-align: center;">Contenido</th>
-                                            <th style="text-align: center;">Correccion</th>
+                                            <th style="text-align: center;">Corrección</th>
                                             <th style="text-align: center;">Acciones</th>    
                                         </tr>
                                     </thead>
@@ -125,12 +134,12 @@ if ( $rs ) {
                 
          <div class="row"> 
          <div class="col-sm-offset-2 col-lg-8">
-         <button type="button" class="btn btn-primary btn-lg btn-block" onClick="agregap(<?php echo "$cm".','."$nm" ?>)">Agregar Otro</button>
+         <button type="button" class="btn btn-success btn-lg btn-block" onClick="agregap(<?php echo "$cm".','."$nm" ?>)">Agregar Otro</button>
          </div>
          </div>
          <div class="row" style="margin:20px 0;">
           <div class="col-lg-offset-5 col-lg-2">
-           <a href="docente1.php" role="button" class="btn btn-default btn-lg btn-block"> 
+           <a href="catedras.php" role="button" class="btn btn-primary btn-sm btn-block"> 
             <p style="margin: 3px 0;">Volver</p>
            </a>
           </div>
@@ -208,10 +217,10 @@ $resultado=mysqli_query($db,$consulta);
                              <table class="table table-striped table-bordered table-hover" id="dataTables-addControls" style="text-align:center;">
                                     <thead>
                                         <tr>
-                                            <th style="text-align: center;">Nro</th>
-                                            <th style="text-align: center;">Fecha Entrega</th>
+                                            <th style="text-align: center;">Nro.</th>
+                                            <th style="text-align: center;">Fecha de Entrega</th>
                                             <th style="text-align: center;">Contenido</th>
-                                            <th style="text-align: center;">Correccion</th>
+                                            <th style="text-align: center;">Corrección</th>
                                             <th style="text-align: center;">Acciones</th>    
                                         </tr>
                                     </thead>
@@ -260,12 +269,12 @@ if ( $rs ) {
                 
          <div class="row"> 
          <div class="col-sm-offset-2 col-lg-8">
-         <button type="button" class="btn btn-primary btn-lg btn-block" onClick="agregap(<?php echo "$cm".','."$nm" ?>)">Agregar Otro</button>
+         <button type="button" class="btn btn-success btn-lg btn-block" onClick="agregap(<?php echo "$cm".','."$nm" ?>)">Agregar Otro</button>
          </div>
          </div>
          <div class="row" style="margin:20px 0;">
           <div class="col-lg-offset-5 col-lg-2">
-           <a href="docente1.php" role="button" class="btn btn-default btn-lg btn-block"> 
+           <a href="catedras.php" role="button" class="btn btn-primary btn-sm btn-block"> 
             <p style="margin: 3px 0;">Volver</p>
            </a>
           </div>

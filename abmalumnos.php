@@ -20,6 +20,15 @@ session_start();
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <header>
@@ -33,11 +42,11 @@ session_start();
 
 <div class="container">
   <div class="col-lg-12" style="text-align:center; margin:20px 20px;">
-    <h3>Listado de alumnos</h3>
+    <h3>Listado de Alumnos</h3>
   </div>
 </div>
 <div class="col-lg-6 col-lg-offset-3" style="margin-top: 20px; margin-bottom: 20px;">
-    <button class="btn btn-success btn-lg btn-block" onclick="nueva()">Agregar alumno</botton>
+    <button class="btn btn-success btn-lg btn-block" onclick="nueva()">Agregar Alumno</botton>
 </div>
 
 
@@ -50,12 +59,11 @@ session_start();
                                     <thead>
                                         <tr>
                                           <th>Editar</th>
-                                            <th>DNI</th>
-                                            
-                                            <th>Nombre y Apellido</th>
-                                            <th>Direccion</th>
-                                            <th>Grado</th>
-                                            <th>Borrar</th>
+                                          <th>DNI</th>
+                                          <th>Nombre y Apellido</th>
+                                          <th>Dirección</th>
+                                          <th>Grado</th>
+                                          <th>Borrar</th>
                                         </tr>
                                     </thead>
                                     <tbody>

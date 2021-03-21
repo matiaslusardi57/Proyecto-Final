@@ -16,10 +16,19 @@ session_start();
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Seguimiento</title>
+	<title>Nuevo Padre</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <header>
@@ -59,15 +68,15 @@ session_start();
                 </div>
         </div>
         <div class="form-group">
-            <label for="direccion" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Direccion</label>
+            <label for="direccion" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Dirección</label>
                 <div class="col-lg-8">
-                  <input type="text" REQUIRED class="form-control" name="direccion" placeholder="Direccion">
+                  <input type="text" REQUIRED class="form-control" name="direccion" placeholder="Dirección">
                 </div>
         </div>
         <div class="form-group">
-            <label for="telefono" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Telefono</label>
+            <label for="telefono" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Teléfono</label>
                 <div class="col-lg-8">
-                  <input type="number" REQUIRED class="form-control" name="telefono" placeholder="telefono">
+                  <input type="number" REQUIRED class="form-control" name="telefono" placeholder="Teléfono">
                 </div>
         </div>
         <div class="form-group">
@@ -92,7 +101,7 @@ session_start();
           <div class="form-group">
               <label for="dni" class="col-lg-3 control-label" style="text-align: center;">DNI</label>
                   <div class="col-lg-8">
-                    <input type="text" REQUIRED class="form-control" name="dni" placeholder="DNI">
+                    <input type="number" REQUIRED class="form-control" name="dni" placeholder="DNI">
                   </div>
           </div>
           <div class="form-group">
@@ -102,15 +111,15 @@ session_start();
                   </div>
           </div>
           <div class="form-group">
-              <label for="direccion" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Direccion</label>
+              <label for="direccion" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Dirección</label>
                   <div class="col-lg-8">
-                    <input type="direccion" REQUIRED class="form-control" name="direccion" placeholder="Direccion">
+                    <input type="direccion" REQUIRED class="form-control" name="direccion" placeholder="Dirección">
                   </div>
           </div>
           <div class="form-group">
-              <label for="telefono" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Telefono</label>
+              <label for="telefono" class="col-lg-3 control-label" style="margin-top: 7px; text-align: center;">Teléfono</label>
                   <div class="col-lg-8">
-                    <input type="telefono" REQUIRED class="form-control" name="telefono" placeholder="telefono">
+                    <input type="telefono" REQUIRED class="form-control" name="telefono" placeholder="Teléfono">
                   </div>
           </div>
           <div class="form-group">
@@ -120,7 +129,7 @@ session_start();
                   </div>
           </div>
           <div class="form-group" style="margin-top: 20px;">
-              <div class="col-lg-offset-3 col-lg-6">
+              <div class="col-lg-offset-3 col-lg-8">
                   <input type="submit" value="Agregar" class="btn btn-success btn-lg btn-block">
               </div>
           </div>
@@ -129,7 +138,7 @@ session_start();
 </div>
 
 
-<div class="col-lg-6 col-lg-offset-3" style="margin-top: 20px; margin-bottom: 20px;">  
+<div class="col-lg-8 col-lg-offset-3" style="margin-top: 20px; margin-bottom: 20px;">  
       <button class="btn btn-primary btn-lg btn-block" onclick="volver()">Volver</botton>
 </div>
 

@@ -8,7 +8,16 @@
 	<link rel="stylesheet" type="text/css" href="estilo.css">
   <script src="http://code.jquery.com/jquery-latest.js"></script>
   <script src="js/arriba.js"></script>
-	
+<link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+
 </head>
 <header>
   <?php
@@ -30,7 +39,7 @@
       Villa Amelia es una localidad argentina de la Provincia de Santa Fe.<br>
       Fue fundada en las inmediaciones de la estación del ferrocarril General Belgrano, a 25 km de Rosario, hasta donde se conecta -vía ruta 16- por la Ruta Provincial 18 o la Autopista. Se ubica a 6 km de Coronel Domínguez y a 8 de Albarellos.<br>
       Además de la actividad agropecuaria, que ocupa directa e indirectamente al 50 % de su población, las fuentes de empleo de Villa Amelia son el criadero de Paladini -emplea a unas 100 personas, algunas de ellas también de Coronel Bogado- y el microemprendimiento para el mantenimiento del corredor vial cercano que llevó adelante la comuna.<br>
-      La empresa ONAS C.A.P.S.A. (distribuidora de productos Puma Energy) tiene su sede administrativa en Villa Amelia (situada en Rivadavia 460) y además posee una estación de servicio en la localidad con domicilio en San Martín 496
+      La empresa ONAS C.A.P.S.A. (distribuidora de productos Puma Energy) tiene su sede administrativa en Villa Amelia (situada en Rivadavia 460) y además posee una estación de servicio en la localidad con domicilio en San Martín 496.
     </p>
     </div>
     <div class="col-lg-6">

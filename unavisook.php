@@ -10,7 +10,7 @@ $docente = recuperar_docente($_SESSION['usuario']);
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Una Aviso</title>
+  <title>Nuevo Aviso</title>
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
       <script src="js/jquery-1.12.2.js"></script>
      <script src="js/bootstrap.min.js"></script>  
@@ -18,6 +18,15 @@ $docente = recuperar_docente($_SESSION['usuario']);
       <link rel="stylesheet" href="js/themes/smoothness/jquery-ui.css">
    <link rel="stylesheet" href="css/bootstrap.min.css">
    <link rel="stylesheet" type="text/css" href="estilo.css">
+   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
   <script>
   $.datepicker.regional['es'] = {
    closeText: 'Cerrar',
@@ -82,8 +91,8 @@ while (($fila=mysqli_fetch_row($resul))==true) {
                                     <thead>
                                         <tr>
                                          
-                                            <th style="text-align: center;">Nro</th>
-                                            <th style="text-align: center;">Sobre</th>
+                                            <th style="text-align: center;">Nro.</th>
+                                            <th style="text-align: center;">Temática</th>
                                             <th style="text-align: center;">Fecha</th>
                                             <th class="hidden">Docente</th>
                                             <th style="text-align: center;">Confirmar</th>
@@ -92,7 +101,7 @@ while (($fila=mysqli_fetch_row($resul))==true) {
                                         </tr>
                                     </thead>
 
-                                    <form name="form6" method="post" action="agregaaviso.php?DNI_Alumno=<?php echo $c; ?>">
+                                    <form name="form6" method="post" action="agregaaviso.php?DNI_Alumno=<?php echo $c; ?>" autocomplete="off">
                                     <tbody>
 
                              
@@ -119,7 +128,7 @@ while (($fila=mysqli_fetch_row($resul))==true) {
                                           <input type="number" name="alumno6" value="<?php echo $c; ?>" id="alumno6">
                                           </td>
                                           <td>
-                                          <input type="submit" value="confirmar" class="btn btn-success" name="confirmar6" id="confirmar6">
+                                          <input type="submit" value="Confirmar" class="btn btn-success" name="confirmar6" id="confirmar6">
                                           </td>
                                         
                                           

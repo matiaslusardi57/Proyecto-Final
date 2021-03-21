@@ -18,10 +18,19 @@ session_start();
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>ABM</title>
+	<title>Personas</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+<link rel="manifest" href="favicon/site.webmanifest">
+<link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
 </head>
 
 <header>
@@ -44,28 +53,28 @@ session_start();
   <div class="col-lg-4">
     <a href="abmdocentes.php"><img src="img/docente1.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmdocentes">
     <center>
-      <button type="button" class="btn btn-primary">Docentes</button>
+      <button type="button" class="btn btn-primary" style="margin-top: 20px">Docentes</button>
     </center>
     </a>
   </div>
   <div class="col-lg-4">
     <a href="abmpadres.php"><img src="img/padres.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmpadres">
     <center>
-      <button type="button" class="btn btn-primary">Padres</button>
+      <button type="button" class="btn btn-primary" style="margin-top: 20px">Padres</button>
     </center>
     </a>
   </div>
   <div class="col-lg-4">
     <a href="abmalumnos.php"><img src="img/alumnos.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px;" alt="abmalumnos">
     <center>
-      <button type="button" class="btn btn-primary">Alumnos</button>
+      <button type="button" class="btn btn-primary" style="margin-top: 20px">Alumnos</button>
     </center>
     </a>
   </div>
 </div>
   <div class="row" style="margin:20px 0;">
     <div class="col-lg-offset-5 col-lg-2">
-      <a href="abmgeneral.php" role="button" class="btn btn-default btn-lg btn-block"> 
+      <a href="abmgeneral.php" role="button" class="btn btn-primary btn-sm btn-block"> 
         <p style="margin: 3px 0;">Volver</p>
       </a>
     </div>
