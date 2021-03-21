@@ -51,6 +51,7 @@ $docente = recuperar_docente($_SESSION['usuario']);
                                             <th style="text-align:center;">DNI</th>
                                             <th style="text-align:center;">Nombre y Apellido</th>
                                             <th style="text-align:center;">Dirección</th>
+                                            <th style="text-align:center;">Telefono Padre</th>
                                             <th style="text-align:center;">Grado</th>
                                             <th style="text-align:center;">Avisos</th>
                                         
@@ -62,9 +63,13 @@ $busqueda=$_GET["buscar"];
 
 
 
-$consulta= "SELECT `DNI_Alumno`,`NombreApellido`,`Direccion`,`Grado_Nro_grado` 
-FROM `alumno` 
-where `NombreApellido` like '%$busqueda%'  
+$consulta= "SELECT a.`DNI_Alumno`,a.`NombreApellido`,a.`Direccion`,a.`Grado_Nro_grado`,p.`Telefono` 
+FROM `alumno` a
+LEFT join `alumno/padre` i
+on a.`DNI_Alumno`= i.`Alumno_DNI_Alumno`
+LEFT JOIN `padre` p
+on i.`Padre_DNI_padre`= p.`DNI_padre`
+where a.`NombreApellido` like '%$busqueda%'  
 order by `Grado_Nro_grado`";
 
 $rs = mysqli_query($db, $consulta);
@@ -73,10 +78,11 @@ if ( $rs ) {
 ?>
                                         <tr>
                      
-                                          <td><?php  echo $r["0"]; ?></td>
-                                          <td><?php  echo $r["1"]; ?></td>
-                                          <td><?php  echo $r["2"]; ?></td>
-                                          <td><?php  echo $r["3"]; ?></td>
+                                          <td><?php  echo $r["DNI_Alumno"]; ?></td>
+                                          <td><?php  echo $r["NombreApellido"]; ?></td>
+                                          <td><?php  echo $r["Direccion"]; ?></td>
+                                          <td><?php  echo $r["Telefono"]; ?></td>
+                                          <td><?php  echo $r["Grado_Nro_grado"]; ?></td>
                                           <td style="text-align:center;">
                                             <button type="button" class="btn btn-danger" onClick="agregaaviso(<?php echo $r["0"] ?>)" style="margin:0 5px;">Agregar Aviso</button>
                                           </td>

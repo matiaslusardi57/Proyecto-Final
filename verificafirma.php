@@ -63,7 +63,7 @@ $admin = recuperar_admin($_SESSION['usuario']);
         <div id="<?php  echo $r0["Nro_grado"]; ?>" class="panel-collapse collapse">
           <div class="panel-body">
                <?php 
-                  $sql = "SELECT a.`NombreApellido`, p.`firma1`, p.`firma2`, p.`firma3`
+                  $sql = "SELECT a.`NombreApellido`, p.`firma1`, p.`firma2`, p.`firma3`, a.`DNI_Alumno`
                           FROM `alumno` a
                           left join `alumno/padre` p
                           on a.`DNI_Alumno` = p.`Alumno_DNI_Alumno`
@@ -87,6 +87,16 @@ $admin = recuperar_admin($_SESSION['usuario']);
                       } elseif (($r["firma3"]==1)) {
                         $firma3="SI";
                       }
+                      $dniAlumno = $r["DNI_Alumno"];
+
+                      $sql30 = "select alu.`DNI_Alumno`, COUNT(a.`Descripcion`)
+                                from `alumno`alu 
+                                LEFT join `avisos`a
+                                on a.`Alumno_DNI_Alumno`= alu.`DNI_Alumno`
+                                where alu.`DNI_Alumno` = $dniAlumno
+                                GROUP by alu.`DNI_Alumno`";
+                       $rs30 = mysqli_query($db, $sql30);
+                       $r30 = mysqli_fetch_array($rs30);
                   ?>
                   <div class="row">
                     <div class="col-lg-3">
@@ -95,7 +105,8 @@ $admin = recuperar_admin($_SESSION['usuario']);
                     <div class="col-lg-9">
                     <span> Firma Primer Trimestre: </span><?php  echo $firma1; ?> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <span> Firma Segundo Trimestre: </span> <?php  echo $firma2; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <span> Firma Tercer Trimestre: </span> <?php  echo $firma3; ?>
+                    <span> Firma Tercer Trimestre: </span> <?php  echo $firma3; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                     Cantidad de Avisos:<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b><?php  echo $r30[1]; ?></b> </span> 
                     </div>
                   </div>
                    <hr>

@@ -45,7 +45,12 @@ $hij=recuperar_h("$c");
 <h1 style="text-align:center;"><?php echo $hij['NombreApellido'] ?></h1>
 <?php
 
-$consulta="select a.`Numero`,a.`Descripcion`,a.`Fecha`,a.`Docente` from `avisos`a inner join `alumno`alu on a.`Alumno_DNI_Alumno`= alu.`DNI_Alumno` where alu.`DNI_Alumno`=$c";
+$consulta="select a.`Numero`,a.`Descripcion`,a.`Fecha`,a.`Docente` 
+from `avisos`a 
+inner join `alumno`alu 
+on a.`Alumno_DNI_Alumno`= alu.`DNI_Alumno` 
+where alu.`DNI_Alumno`=$c
+order by a.`idAvisos`";
 
 $resultado=mysqli_query($db, $consulta);
 
