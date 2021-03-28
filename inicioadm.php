@@ -66,7 +66,7 @@ $admin = recuperar_admin($_SESSION['usuario']);
     </a>
   </div>
     <div class="col-lg-3">
-    <a href="verificafirma.php">
+    <a href="libretasGenerales.php">
       <img src="img/libretaonline.png" class="img-responsive; text-center;" style="width: 100%; height: 250px; padding-left:30px" alt="vincular">
       <center>
         <button type="button" class="btn btn-primary" style="margin-top: 20px">Libreta Online</button>

@@ -7,6 +7,7 @@ $f1=$_GET["firma1"];
 $f2=$_GET["firma2"];
 $f3=$_GET["firma3"];
 
+
 $sql = "UPDATE `alumno/padre` set `firma1`= $f1, `firma2`= $f2, `firma3`= $f3
  		WHERE `Alumno_DNI_Alumno` = $alumno and `Padre_DNI_padre`= $padre";
 

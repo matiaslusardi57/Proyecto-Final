@@ -35,7 +35,7 @@ $admin = recuperar_admin($_SESSION['usuario']);
  <br>
 <div class="container">
   <div class="row" style="text-align: center;">
-    <h2>Listado de alumnos por año</h2>
+    <h2>Listado de firmas y Avisos</h2>
   </div>
 
 <div class="container">
@@ -131,7 +131,7 @@ $admin = recuperar_admin($_SESSION['usuario']);
 
   <div class="row" style="margin:20px 0;">
     <div class="col-lg-offset-5 col-lg-2">
-      <a href="inicioadm.php" role="button" class="btn btn-primary btn-sm btn-block"> 
+      <a href="libretasGenerales.php" role="button" class="btn btn-primary btn-sm btn-block"> 
         <p style="margin: 3px 0;">Volver</p>
       </a>
     </div>

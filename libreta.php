@@ -119,7 +119,7 @@ $resultado=mysqli_query($db, $consulta);
   </div>
 </div>
 <?php
-$consulta="SELECT `firma1`,`firma2`,`firma3`,`fecha` FROM `alumno/padre` WHERE `Alumno_DNI_Alumno`=$c AND `Padre_DNI_padre` = $dni_p";
+$consulta="SELECT `firma1`,`firma2`,`firma3`,`cn1`,`cn2`,`cn3` FROM `alumno/padre` WHERE `Alumno_DNI_Alumno`=$c AND `Padre_DNI_padre` = $dni_p";
 $rs=mysqli_query($db, $consulta);
 if ( $rs ) {
   while ($r = mysqli_fetch_array($rs) ) {
@@ -133,38 +133,55 @@ if ( $rs ) {
               <label style="text-align: left;">Conformidad Trimestral:</label>
             </div>
         </td>
+        <?php  if ($r["3"]==1) {
+                  ?>
         <td class="active" style="text-align: center;">
           <div class="col-lg-2">
               <label style="text-align: center;" class="btn">
                 <?php  if ($r["0"]==1) {
                   ?>
-                  <input name="firma1" id="firma1" class="hidden" value="<?php echo $r["0"]; ?>"><b> Firma: <?php echo "$nom_padre"; ?></label> 
+                  <input name="firma1" id="firma1" class="hidden" value="<?php echo $r["0"]; ?>"><b> Firma 1°: <?php echo "$nom_padre"; ?>
+              </label>
+                   
                 <?php
                 } else{ ?>
+                  <input name="firma2" id="firma2" class="hidden" value="<?php echo $r["1"]; ?>">
+                  <input name="firma3" id="firma3" class="hidden" value="<?php echo $r["2"]; ?>">
                   <input name="firma1" id="firma1" type="checkbox" value="<?php echo $r["0"]; ?>"><b> Firma</label>
                 <?php
                 } ?>
             </div>
         </td>
+        <?php 
+          }
+         ?>
+           <?php  if ($r["3"]==1 && $r["4"]==1 ) {
+                  ?>
         <td class="active" style="text-align: center;">
           <div class="col-lg-2">
               <label style="text-align: center;" class="btn">
                 <?php  if ($r["1"]==1) {
                   ?>
-                  <input name="firma2" id="firma2" class="hidden" value="<?php echo $r["1"]; ?>"><b> Firma: <?php echo "$nom_padre"; ?></label>  
+                  <input name="firma2" id="firma2" class="hidden" value="<?php echo $r["1"]; ?>"><b> Firma 2°: <?php echo "$nom_padre"; ?></label>  
                 <?php
                 } else{ ?>
                   <input name="firma2" id="firma2" type="checkbox" value="<?php echo $r["1"]; ?>"><b> Firma</label>
+                  <input name="firma3" id="firma3" type="hidden" value="<?php echo $r["2"]; ?>">
                 <?php
                 } ?>
           </div>
         </td>
+         <?php 
+          }
+         ?>
+           <?php  if ($r["3"]==1 && $r["4"]==1 && $r["5"]==1 ) {
+                  ?>
         <td class="active" style="text-align: center;">
           <div class="col-lg-2">
               <label style="text-align: center;" class="btn">
                 <?php  if ($r["2"]==1) {
                   ?>
-                  <input name="firma3" id="firma3" class="hidden" value="<?php echo $r["2"]; ?>"><b> Firma: <?php echo "$nom_padre"; ?></label> 
+                  <input name="firma3" id="firma3" class="hidden" value="<?php echo $r["2"]; ?>"><b> Firma 3°: <?php echo "$nom_padre"; ?></label> 
                 <?php
                 } else{ ?>
                   <input name="firma3" id="firma3" type="checkbox" value="<?php echo $r["2"]; ?>"><b> Firma</label>
@@ -172,17 +189,9 @@ if ( $rs ) {
                 } ?>
           </div>
         </td>
-        <?php
-            $array_fecha = explode(" ", $r["3"]);
-            $a_f = $array_fecha[0];
-            $fecha = explode("-", $a_f);
-            $f = $fecha[2] . '/' . $fecha[1] . '/' . $fecha[0];
-        ?>
-        <td class="active" style="text-align: center;">
-          <div class="col-lg-2">
-            <b>Fecha: <?php echo "$f"; ?>
-          </div>
-        </td>
+           <?php 
+          }
+         ?>
     </table>
   </div>
 </div>

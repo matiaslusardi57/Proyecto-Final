@@ -11,7 +11,7 @@ $admin = recuperar_admin($_SESSION['usuario']);
 <html lang="es">
 <head>
 	<meta charset="UTF-8">
-	<title>Listados Generales</title>
+	<title>Libretas</title>
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<link rel="stylesheet" href="css/bootstrap.min.css"> 
 	<link rel="stylesheet" type="text/css" href="estilo.css">
@@ -34,46 +34,38 @@ $admin = recuperar_admin($_SESSION['usuario']);
 <body>
 
 <div class="container">
-<div class="row" style="text-align:center;">
-<h1>Tipos de Listados</h1>
-</div>
 
+<br><br>
 <div class="container" style="margin-top: 20px; margin-bottom: 50px;">
-
-  <div class="col-lg-4">
-    <a href="generalesPadres.php">
-      <img src="img/ph.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px; padding-right:30px" alt="abm">
+  <div class="col-lg-3 col-lg-offset-2">
+    <a href="verificafirma.php">
+      <img src="img/firmalibreta.png" class="img-responsive; text-center;" style="width: 100%; height: 250px; padding-right:30px" alt="abm">
       <center>
-        <button type="button" class="btn btn-primary" style="margin-top: 20px">Padres-Alumos</button>
+        <button type="button" class="btn btn-primary" style="margin-top: 20px">Firmas del Padres</button>
       </center>
     </a>
   </div>
-    <div class="col-lg-4">
-    <a href="generalesAlumnos.php">
-      <img src="img/listadoalumnos.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px; padding-right:30px" alt="abm">
+  <div class="col-lg-3 col-lg-offset-1">
+    <a href="notasGrados.php">
+      <img src="img/notasgrado.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px; padding-left:30px" alt="vincular">
       <center>
-        <button type="button" class="btn btn-primary" style="margin-top: 20px">Alumnos-Grado</button>
-      </center>
-    </a>
-  </div>
-  <div class="col-lg-4">
-    <a href="generalesDocentes.php">
-      <img src="img/mat.jpg" class="img-responsive; text-center;" style="width: 100%; height: 250px; padding-left:30px" alt="vincular">
-      <center>
-        <button type="button" class="btn btn-primary" style="margin-top: 20px">Docentes-Materias</button>
+        <button type="button" class="btn btn-primary" style="margin-top: 20px; margin-left: 60px;">Notas por Grado</button>
       </center>
     </a>
   </div>
 
 </div>
 
-  <div class="row" style="margin:20px 0; margin-left: 35px;">
+  <div class="row" style="margin:20px 0;">
     <div class="col-lg-offset-5 col-lg-2">
       <a href="inicioadm.php" role="button" class="btn btn-primary btn-sm btn-block"> 
         <p style="margin: 3px 0;">Volver</p>
       </a>
     </div>
   </div> 
+
+
+
  
 <div class="clearfooter"></div>
 
